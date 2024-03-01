@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-image:url('https://cdn.pixabay.com/photo/2016/04/06/10/53/maze-1311440_960_720.png');" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apro1_22z_pro_sdscmk.HomePageController">
+   <center>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+          <padding><Insets bottom="40" left="20" right="20" top="30" /></padding>
+          <children>
+              <Button fx:id="go" mnemonicParsing="false" onAction="#go" text="GO!" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                  <font>
+                      <Font size="24.0" />
+                  </font>
+              </Button>
+              <ChoiceBox fx:id="difficulty" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+              <ChoiceBox fx:id="algorithm" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+              <Label text="Difficulty" textFill="#2402ff" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <font>
+                      <Font size="18.0" />
+                  </font>
+              </Label>
+              <Label text="Algorithm" textFill="#2402ff" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <font>
+                      <Font size="18.0" />
+                  </font>
+              </Label>
+              <Label text="MAZE" textFill="#2402ff" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                  <font>
+                      <Font size="36.0" />
+                  </font>
+              </Label>
+          </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+   </center>
+</BorderPane>

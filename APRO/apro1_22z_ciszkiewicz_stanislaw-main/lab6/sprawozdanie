@@ -1,0 +1,13 @@
+zadanie 3.2
+=>1 w b1 f1 true jest wywołane 2 razy
+    w b2 f1 true jest wywołane 2 razy (trzeba sprawdzić czy oba są prawdziwe)
+=>2 w b3 f1 false jest wywołane 2 razy
+    w b4 f1 false jest wywołane tylko 1 raz (w koniunkcji, aby stwierdzić że jest nieprawdziwa wystarczy, że jedna część jest fałszywa)
+=>3 w b5 f1 true wywołane 2 razy
+    w b6 f1 true wywołane 1 raz (to wystarcza, aby stwierdzić że alternatywa jest prawdziwa)
+=>4 w b7 f1 false wywołane 2 razy
+    w b8 f1 false wywołane 2 razy (alternatywa, więc musimy sprawdzić czy przypadkiem drugi element nie jest prawdziwy)
+
+=>5 operacje bitowe zawsze wykonają się dwukrotnie, co do operacji logicznych zależy od rodzaju operacji logicznej
+
+=>6
