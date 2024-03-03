@@ -1,0 +1,109 @@
+
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>index</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            background-color: #F8FFEF;
+        }
+        .striped-table tbody tr:nth-child(odd) {
+            background-color: white; /* Kolor tła dla nieparzystego wiersza */
+        }
+
+        .striped-table tbody tr:nth-child(even) {
+            background-color: #f4f4f4; /* Kolor tła dla parzystego wiersza */
+        }
+        .striped-table thead tr {
+            background-color: #1e293b; /* Kolor tła dla nagłówka */
+            color: white; /* Kolor tekstu dla nagłówka */
+        }
+        .text-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+        .text-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Półprzezroczyste białe tło */
+            padding: 10px; /* Dodaj trochę wypełnienia dla lepszego wyglądu */
+            border-radius: 5px; /* Zaokrąglij rogi */
+        }
+
+        .text-3x1, .text-x1 {
+            display: inline; /* Upewnij się, że tło obejmuje tylko tekst, a nie całą linię */
+        }
+    </style>
+
+</head>
+
+<!-- <body th:style="'background: url(/assets/img/img.png) no-repeat center center fixed;'"> -->
+
+
+<!--<style th:inline="text">-->
+<!--    body{-->
+<!--        background: url([[@{/assets/img/img.png}]])-->
+<!--        no-repeat center center fixed;-->
+<!--    }-->
+<!--</style>-->
+
+
+<!-- Navigation -->
+<body style="background-image: url('/main_admin_background.png'); background-size: cover; background-position: center; background-repeat: no-repeat">
+<nav class="bg-gray-800 text-white p-4">
+    <div class="container mx-auto flex items-center justify-between">
+        <a class="text-xl font-bold" href="/">Klub lekkoatletyczny</a>
+        <div class="flex items-center space-x-4">
+            <a class="text-white" th:href="@{/index}">Main</a>
+            <a class="text-white" th:href="@{/wydarzenia_non_login}">Wydarzenia</a>
+            <form method="post" th:action="@{/login}">
+                <button class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" onclick="successfullyLogout()" value="Sign Out">Zaloguj</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<!--Using images in page    -->
+<!-- <img th:src="@{/assets/img/img.png}" alt="Image" class="img-fluid"> -->
+
+
+<div class="container mx-auto text-center">
+    <div class="mt-5">
+        <div class="text-container">
+            <label class="text-3x1">Witaj na stronie głównej!</label>
+            <div class="text-x1">Jeśli chcesz się zalogować kliknij <a th:href="@{/main}"><b>tutaj</b></a> albo w prawym górnym rogu.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mx-auto text-center fixed bottom-0 w-full">
+    <div class="mt-5">
+        <div class="text-container">
+            <div class="text-x1">
+                <div style="font-weight: bold;">Witaj w Klubie Lekkoatletycznym!</div>
+                <br>
+                Jesteśmy pasjonatami sportu, którzy zebrali się razem, aby wspólnie rozwijać swoje umiejętności lekkoatletyczne, promować zdrowy tryb życia i budować silną społeczność sportową. Nasza historia sięga 1920 roku, kiedy to założyliśmy klub z myślą o tym, aby dostarczyć miejsce, gdzie wszyscy miłośnicy lekkoatletyki mogą się spotkać, trenować i rozwijać się.<br>
+                <br>
+                Kontakt:<br>
+                klub.lekkoatletyczny@kl.pl<br>
+                +48 111 222 333<br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
+

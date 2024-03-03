@@ -1,0 +1,31 @@
+------------------------------------------------------------
+Client connecting to 10.0.0.5, TCP port 5020 with pid 3090
+Write buffer size: 15.0 Byte
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  5] local 10.0.0.10 port 58934 connected with 10.0.0.5 port 5020 (ct=31.72 ms)
+[ ID] Interval            Transfer    Bandwidth       Write/Err  Rtry     Cwnd/RTT        NetPwr
+[  5] 0.0000-1.0000 sec  1.71 MBytes  14.4 Mbits/sec  119703/0          0       14K/31552 us  56.91
+[  5] 1.0000-2.0000 sec  1.30 MBytes  10.9 Mbits/sec  91224/0          0      175K/143998 us  9.50
+[  5] 2.0000-3.0000 sec  1.68 MBytes  14.1 Mbits/sec  117288/0          0      230K/187810 us  9.37
+[  5] 3.0000-4.0000 sec  1.43 MBytes  12.0 Mbits/sec  99912/0          0      304K/248348 us  6.03
+[  5] 4.0000-5.0000 sec   827 KBytes  6.78 Mbits/sec  56472/0          0      366K/297807 us  2.84
+[  5] 5.0000-6.0000 sec  1.80 MBytes  15.1 Mbits/sec  125976/2          0      401K/327017 us  5.78
+[  5] 6.0000-7.0000 sec   954 KBytes  7.82 Mbits/sec  65160/1          0      473K/384785 us  2.54
+[  5] 7.0000-8.0000 sec  1.80 MBytes  15.1 Mbits/sec  125976/2          0      510K/415415 us  4.55
+[  5] 8.0000-9.0000 sec  1.45 MBytes  12.1 Mbits/sec  101059/1          0      582K/474247 us  3.20
+[  5] 9.0000-10.0000 sec  1.23 MBytes  10.3 Mbits/sec  85733/2          0      622K/523035 us  2.46
+[  5] 10.0000-11.0000 sec  1.93 MBytes  16.2 Mbits/sec  134664/2          0      690K/578196 us  3.49
+[  5] 11.0000-12.0000 sec  1.30 MBytes  10.9 Mbits/sec  91224/1          0      839K/658144 us  2.08
+[  5] 12.0000-13.0000 sec  2.21 MBytes  18.5 Mbits/sec  154367/1          0      971K/746293 us  3.10
+[  5] 13.0000-14.0000 sec  2.70 MBytes  22.7 Mbits/sec  188809/2          0     1141K/878941 us  3.22
+[  5] 14.0000-15.0000 sec  1.86 MBytes  15.6 Mbits/sec  130320/1          0     1473K/1067608 us  1.83
+[  5] 15.0000-16.0000 sec  2.56 MBytes  21.5 Mbits/sec  178987/1          0     1688K/1203131 us  2.23
+[  5] 16.0000-17.0000 sec  3.40 MBytes  28.5 Mbits/sec  237692/1          0     1914K/1364827 us  2.61
+[  5] 17.0000-18.0000 sec  3.24 MBytes  27.1 Mbits/sec  226233/2          0     2266K/1591276 us  2.13
+[  5] 18.0000-19.0000 sec  1.37 MBytes  11.5 Mbits/sec  95568/1          0     2802K/1923766 us  0.75
+[  5] 19.0000-20.0000 sec  1.37 MBytes  11.5 Mbits/sec  95568/2          0     2686K/2064764 us  0.69
+[  5] 20.0000-21.0000 sec  1.11 MBytes  9.33 Mbits/sec  77779/1          0     2283K/2339466 us  0.50
+[  5] 21.0000-22.0000 sec   961 KBytes  7.87 Mbits/sec  65573/2          0     2068K/2509292 us  0.39
+[  5] 22.0000-23.0000 sec  1.49 MBytes  12.5 Mbits/sec  104256/2          0     2056K/2108479 us  0.74
+[  5] 0.0000-23.4021 sec  40.0 MBytes  14.3 Mbits/sec  2796204/27          0       -1K/993074 us  1.80

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Kluby</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            background-color: #F8FFEF;
+        }
+        .striped-table tbody tr:nth-child(odd) {
+            background-color: white; /* Kolor tła dla nieparzystego wiersza */
+        }
+
+        .striped-table tbody tr:nth-child(even) {
+            background-color: #f4f4f4; /* Kolor tła dla parzystego wiersza */
+        }
+        .striped-table thead tr {
+            background-color: #1e293b; /* Kolor tła dla nagłówka */
+            color: white; /* Kolor tekstu dla nagłówka */
+        }
+        .text-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+    </style>
+
+</head>
+
+<!-- <body th:style="'background: url(/assets/img/img.png) no-repeat center center fixed;'"> -->
+
+
+<!--<style th:inline="text">-->
+<!--    body{-->
+<!--        background: url([[@{/assets/img/img.png}]])-->
+<!--        no-repeat center center fixed;-->
+<!--    }-->
+<!--</style>-->
+
+
+<!-- Navigation -->
+<body style="background-image: url('/tlo4.png'); background-size: cover; background-position: center; background-repeat: no-repeat">
+<nav class="bg-gray-800 text-white p-4" style="white-space: nowrap; max-width: 100%;">
+    <div class="container mx-auto flex items-center justify-between">
+        <a class="text-xl font-bold" href="/">Klub lekkoatletyczny</a>
+        <div class="flex items-center space-x-4">
+            <a class="text-white" th:href="@{/adresy}">Adresy</a>
+            <a class="text-white" th:href="@{/kibice}">Kibice</a>
+            <a class="text-white" th:href="@{/obiekty}">Obiekty</a>
+            <a class="text-white" th:href="@{/kluby}">Kluby</a>
+            <a class="text-white" th:href="@{/dyscypliny}">Dyscypliny</a>
+            <a class="text-white" th:href="@{/wydarzenia}">Wydarzenia</a>
+            <a class="text-white" th:href="@{/kibiceWydarzenia}">Kibice wydarzenia</a>
+            <a class="text-white" th:href="@{/main_admin}">Main</a>
+            <a class="text-light-blue-500" th:inline="text">You are logged in as <b style="text-transform:capitalize">[[${#httpServletRequest.remoteUser}]]</b></a>
+            <form method="post" th:action="@{/index}">
+                <button class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"type="submit" onclick="successfullyLogout()" value="Sign Out">Wyloguj</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<!--Using images in page    -->
+<!-- <img th:src="@{/assets/img/img.png}" alt="Image" class="img-fluid"> -->
+
+<div class="text-right">
+    <a href="/newKlub">
+        <button class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4">
+            Dodaj nowy wpis do tabeli KLUBY
+        </button>
+    </a>
+</div>
+
+<br/><br/>
+
+<div class="container mx-auto p-4 text-center">
+    <table class="table-auto w-full border-collapse border border-black striped-table">
+        <thead>
+        <tr>
+            <th class="px-4 py-2">Nr klubu</th>
+            <th class="px-4 py-2">Nazwa</th>
+            <th class="px-4 py-2">Data założenia</th>
+            <th class="px-4 py-2">Nr adresu</th>
+            <th class="px-4 py-2">Edytuj Usuń</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="klub : ${listKlub}">
+            <td class="border px-4 py-2 text-center" th:text="${klub.nrKlubu}">Nr klubu</td>
+            <td class="border px-4 py-2 text-center" th:text="${klub.nazwa}">Nazwa</td>
+            <td class="border px-4 py-2 text-center" th:text="${klub.dataZalozenia}">Data założenia</td>
+            <td class="border px-4 py-2 text-center" th:text="${klub.nrAdresu}">Nr adresu</td>
+            <td class="border px-4 py-2 text-center">
+                <a class="text-blue-500 hover:underline mr-2" th:href="@{'/editKlub/' + ${klub.nrKlubu}}">Edit</a>
+                <a class="text-red-500 hover:underline" th:href="@{'/deleteKlub/' + ${klub.nrKlubu}}"
+                   onclick="return confirm('Czy na pewno chcesz usunąć ten wpis?')">Delete</a>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

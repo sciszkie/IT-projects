@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Error Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            background-color: #F8FFEF;
+        }
+        .striped-table tbody tr:nth-child(odd) {
+            background-color: white; /* Kolor tła dla nieparzystego wiersza */
+        }
+
+        .striped-table tbody tr:nth-child(even) {
+            background-color: #f4f4f4; /* Kolor tła dla parzystego wiersza */
+        }
+        .striped-table thead tr {
+            background-color: #1e293b; /* Kolor tła dla nagłówka */
+            color: white; /* Kolor tekstu dla nagłówka */
+        }
+        .text-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+<!-- Navigation -->
+<nav class="bg-gray-800 text-white p-4">
+    <div class="container mx-auto flex items-center justify-between">
+        <a class="text-xl font-bold" href="/">Klub lekkoatletyczny</a>
+        <div class="flex items-center space-x-4">
+            <a class="text-white" th:href="@{/main_user}">Main</a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container mx-auto mt-8">
+    <div class="flex justify-center">
+        <div class="w-1/2 p-8 bg-white rounded-lg">
+            <form method="post" th:action="@{/main}">
+                <div class="mb-4">
+                    <div><b><p class="text-3xl">Błąd</p></b></div>
+                    <div><p class="text-2xl" th:text="${error}"></p></div>
+                </div>
+                <a th:href="${#httpServletRequest.getHeader('referer')}" class="bg-blue-500 text-white px-4 py-2 rounded">Wróć na poprzednią stronę</a>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

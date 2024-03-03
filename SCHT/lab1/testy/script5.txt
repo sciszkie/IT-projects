@@ -1,0 +1,5 @@
+h1 iperf -e -s -S 0x08 -i 1 -p 5020 >serwertcp5twosessionsbandminall31&
+h1 iperf -e -s -S 0x08 -i 1 -p 5021 >serwertcp5twosessionsbandminall32&
+h9 iperf -c h1 -p 5020 -e -i 1 -n 40M >klienttcptwosessionsbandminall31&
+h10 iperf -c h1 -p 5021 -e -i 1 -n 40M >klienttcptwosessionsbandminall32&
+

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Adresy</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            background-color: #F8FFEF;
+        }
+        .striped-table tbody tr:nth-child(odd) {
+            background-color: white; /* Kolor tła dla nieparzystego wiersza */
+        }
+
+        .striped-table tbody tr:nth-child(even) {
+            background-color: #f4f4f4; /* Kolor tła dla parzystego wiersza */
+        }
+        .striped-table thead tr {
+            background-color: #1e293b; /* Kolor tła dla nagłówka */
+            color: white; /* Kolor tekstu dla nagłówka */
+        }
+        .text-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+    </style>
+
+</head>
+
+<!-- <body th:style="'background: url(/assets/img/img.png) no-repeat center center fixed;'"> -->
+
+
+<!--<style th:inline="text">-->
+<!--    body{-->
+<!--        background: url([[@{/assets/img/img.png}]])-->
+<!--        no-repeat center center fixed;-->
+<!--    }-->
+<!--</style>-->
+
+
+<!-- Navigation -->
+<body style="background-image: url('/tlo1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat">
+<nav class="bg-gray-800 text-white p-4">
+    <div class="container mx-auto flex items-center justify-between">
+        <a class="text-xl font-bold" href="/">Klub lekkoatletyczny</a>
+        <div class="flex items-center space-x-4">
+            <a class="text-white" th:href="@{/kibice}">Dane</a>
+            <a class="text-white" th:href="@{/adresy}">Adres</a>
+            <a class="text-white" th:href="@{/wydarzenia}">Wydarzenia</a>
+            <a class="text-white" th:href="@{/kibiceWydarzenia}">Moje wydarzenia</a>
+            <a class="text-light-blue-500" th:inline="text">Jesteś zalogowany jako <b style="text-transform:capitalize">[[${#httpServletRequest.remoteUser}]]</b></a>
+            <form method="post" th:action="@{/index}">
+                <button class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"type="submit" onclick="successfullyLogout()" value="Sign Out">Wyloguj</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!--Using images in page    -->
+<!-- <img th:src="@{/assets/img/img.png}" alt="Image" class="img-fluid"> -->
+
+
+<br/><br/>
+
+<div class="container mx-auto p-4 text-center">
+    <table class="table-auto w-full border-collapse border border-black striped-table">
+        <thead>
+        <tr>
+            <th class="px-4 py-2">Nr budynku</th>
+            <th class="px-4 py-2">Nr lokalu</th>
+            <th class="px-4 py-2">Ulica</th>
+            <th class="px-4 py-2">Miasto</th>
+            <th class="px-4 py-2">Kod pocztowy</th>
+            <th class="px-4 py-2">Edytuj</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="adress : ${listAdress}">
+            <td class="border px-4 py-2 text-center" th:text="${adress.nrBudynku}">Nr budynku</td>
+            <td class="border px-4 py-2 text-center" th:text="${adress.nrLokalu}">Nr lokalu</td>
+            <td class="border px-4 py-2 text-center" th:text="${adress.ulica}">Ulica</td>
+            <td class="border px-4 py-2 text-center" th:text="${adress.miasto}">Miasto</td>
+            <td class="border px-4 py-2 text-center" th:text="${adress.kodPocztowy}">Kod pocztowy</td>
+            <td class="border px-4 py-2 text-center">
+                <a class="text-blue-500 hover:underline mr-2" th:href="@{'/editAdres/' + ${adress.nrAdresu}}">Edit</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
