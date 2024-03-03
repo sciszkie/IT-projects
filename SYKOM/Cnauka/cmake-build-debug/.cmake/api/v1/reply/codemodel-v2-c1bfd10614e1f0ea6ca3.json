@@ -1,0 +1,195 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Cnauka",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ArraysHistogramHorizontal::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArraysHistogramHorizontal-Debug-e82fb3377c1dd3b87744.json",
+					"name" : "ArraysHistogramHorizontal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BlanksReplace::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BlanksReplace-Debug-b29950b45c1346f4dde4.json",
+					"name" : "BlanksReplace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CelsiusFahrFunction::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CelsiusFahrFunction-Debug-eccbeb2452a186f32427.json",
+					"name" : "CelsiusFahrFunction",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Chapter1CF::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chapter1CF-Debug-adfd41ddba5d513582d4.json",
+					"name" : "Chapter1CF",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Chapter1CFFor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chapter1CFFor-Debug-042e3e32aef199490eb2.json",
+					"name" : "Chapter1CFFor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Chapter1CFMod::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chapter1CFMod-Debug-83b370bf762451e68272.json",
+					"name" : "Chapter1CFMod",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Cnauka::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Cnauka-Debug-eb616bbd83492a4d4b92.json",
+					"name" : "Cnauka",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Copy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Copy-Debug-2e5a3d9dfb462a355adb.json",
+					"name" : "Copy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CountBlanksTabsNewlines::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CountBlanksTabsNewlines-Debug-928066de21713ea2ea50.json",
+					"name" : "CountBlanksTabsNewlines",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CountCharacters::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CountCharacters-Debug-1580a9a8770400ace8e9.json",
+					"name" : "CountCharacters",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CountLines::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CountLines-Debug-52539387d48d5fd8cb88.json",
+					"name" : "CountLines",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FrequenciesofCharactersHist::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FrequenciesofCharactersHist-Debug-c8f271815652e9e9f815.json",
+					"name" : "FrequenciesofCharactersHist",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LongestLine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LongestLine-Debug-d478422d38ad9ab0f3cd.json",
+					"name" : "LongestLine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LongestLine80::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LongestLine80-Debug-d7e0f7a32d053ef9b2f0.json",
+					"name" : "LongestLine80",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ReplaceTabsBackspaceBackslash::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ReplaceTabsBackspaceBackslash-Debug-078828f57be5aa9a0183.json",
+					"name" : "ReplaceTabsBackspaceBackslash",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WordCounting::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WordCounting-Debug-f395ef4b163feffe7d4b.json",
+					"name" : "WordCounting",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/stasz/Desktop/stas/studia/semestr 4/SYKOM/Cnauka/cmake-build-debug",
+		"source" : "C:/Users/stasz/Desktop/stas/studia/semestr 4/SYKOM/Cnauka"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
